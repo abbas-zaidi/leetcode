@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main_4() {
+func mergeInterval() {
 	arr := []int{5, 3, 4, 9, 2}
 	//arr := [][]int{{2, 4}, {1, 3}, {6, 8}, {1, 10}}
 	insertionSort3(arr)

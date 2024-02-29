@@ -6,12 +6,12 @@ import (
 	"math/rand"
 )
 
-func main() {
+func bs_tree() {
 
 	t := TreeNode{
-		val:   33,
-		left:  nil,
-		right: nil,
+		Value: 33,
+		Left:  nil,
+		Right: nil,
 	}
 	j := 0
 	for i := 0; i < 50; i++ {
@@ -29,35 +29,29 @@ func main() {
 	fmt.Println("Min == ", t.FindMin())
 }
 
-type TreeNode struct {
-	val   int
-	left  *TreeNode
-	right *TreeNode
-}
-
 func (t *TreeNode) Insert(val int) error {
 
 	if t == nil {
 		return errors.New("Tree is nil")
 	}
 
-	if t.val == val {
+	if t.Value == val {
 		return errors.New("This node already exists")
 	}
 
-	if t.val > val {
-		if t.left == nil {
-			t.left = &TreeNode{val: val}
+	if t.Value > val {
+		if t.Left == nil {
+			t.Left = &TreeNode{Value: val}
 		} else {
-			t.left.Insert(val)
+			t.Left.Insert(val)
 		}
 	}
 
-	if t.val < val {
-		if t.right == nil {
-			t.right = &TreeNode{val: val}
+	if t.Value < val {
+		if t.Right == nil {
+			t.Right = &TreeNode{Value: val}
 		} else {
-			t.right.Insert(val)
+			t.Right.Insert(val)
 		}
 	}
 
@@ -65,9 +59,9 @@ func (t *TreeNode) Insert(val int) error {
 }
 
 func (t *TreeNode) FindMin() int {
-	if t.left == nil {
-		return t.val
+	if t.Left == nil {
+		return t.Value
 	} else {
-		return t.left.FindMin()
+		return t.Left.FindMin()
 	}
 }

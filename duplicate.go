@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main_9() {
+func duplicate() {
 	arr := []int{1, 6, 3, 1, 3, 6, 6}
 	dups := make([]int, 0)
 

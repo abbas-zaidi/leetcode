@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func main() {
+func missingPositive() {
 	arr := []int{2, 3, 7, 6, 8, -1, -10, -15}
 
 	min := math.MaxInt

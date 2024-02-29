@@ -6,7 +6,7 @@ import "fmt"
 
 //import "fmt"
 
-func main() {
+func circularArray() {
 	nums := []int{-1, -2, -3, -4, -5, 6}
 
 	fmt.Println("circularArrayLoop == ", circularArrayLoop(nums))
